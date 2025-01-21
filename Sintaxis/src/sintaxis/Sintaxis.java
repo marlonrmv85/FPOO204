@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package sintaxis;
-
+import java.util.*;
 /**
  *
  * @author marlo
@@ -15,6 +15,7 @@ public class Sintaxis {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.out.println("hola munde");
     }
     
 }
