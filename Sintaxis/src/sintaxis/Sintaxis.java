@@ -15,7 +15,17 @@ public class Sintaxis {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("hola munde");
+        System.out.println("hola Marlon Mendieta");
+        
+        String cadenas = "marlon + mendieta + valadez";
+        
+        System.out.println(cadenas);
+        
+        System.out.println(cadenas.length());
+        System.out.println(cadenas.substring(2,5));
+        System.out.println(cadenas.substring(2));
+        System.out.println(cadenas.substring(0,5));
+        
     }
     
 }
