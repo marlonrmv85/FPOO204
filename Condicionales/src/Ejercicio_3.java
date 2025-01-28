@@ -15,6 +15,14 @@ public class Ejercicio_3 {
         System.out.println("ingrese su edad");
         int edad = sc.nextInt();
 
-        if()
+        if(edad<4){
+            System.out.println("Puedes entrar gratis");
+        }
+        if (edad >= 4 && edad <= 17) {
+            System.out.println(" el costo de su entrada es: $110.");
+        } else {
+            System.out.println("el costo de su entrada es: $190.");
+        }
+
+        }
     }
-}

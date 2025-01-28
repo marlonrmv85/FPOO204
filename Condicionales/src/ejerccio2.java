@@ -13,11 +13,9 @@ public class ejerccio2 {
         System.out.println("ingresa un numero entero");
         int n=sc.nextInt();
 
-        if(n/2==0){
+        if(n%2==0){
             System.out.println("el numero ingresado es par");
-        }
-
-        else{
+        } else{
             System.out.println("el numero ingresado es impar");
         }
 
