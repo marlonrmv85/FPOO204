@@ -23,21 +23,21 @@ public class Sintaxis {
     //metodo principal
     public static void main(String[] args) {
         // cadenas
-       // System.out.println("hola Marlon Mendieta");
+       System.out.println("hola Marlon Mendieta");
         
-       // String cadenas = "marlon + mendieta + valadez";
+        String cadenas = "marlon + mendieta + valadez";
         
-       // System.out.println(cadenas);
+        System.out.println(cadenas);
         
-        //System.out.println(cadenas.length());
-        //System.out.println(cadenas.substring(2,5));
-        //System.out.println(cadenas.substring(2));
-        //System.out.println(cadenas.substring(0,5));
+        System.out.println(cadenas.length());
+        System.out.println(cadenas.substring(2,5));
+        System.out.println(cadenas.substring(2));
+        System.out.println(cadenas.substring(0,5));
         
         //-3. variables
-        //int x=5,x2;
-        //double y=1.25,y2;
-        /*String z="204",z1;
+      /*  int x=5,x2;
+        double y=1.25,y2;
+        String z="204",z1;
         
         x2=Integer.parseInt(z);
         z1=String.valueOf(y);
@@ -63,12 +63,12 @@ public class Sintaxis {
         double numDouble=rdn.nextDouble();
         System.out.println("aleatorio entero:"+numAleatorio);
         System.out.println("aleatorio double:"+numDouble);
-/*
+
         
-        */
+        
         //4. Solicitud de datos
         
-        /*Scanner scn=new Scanner(System.in);
+        Scanner scn=new Scanner(System.in);
         
         System.out.println("introduce cualquier dato");
         String dato=scn.nextLine();
@@ -85,11 +85,11 @@ public class Sintaxis {
         scn.nextLine();
         System.out.println("dato decimal"+datodecimal);
         scn.nextLine();
-            /*
+            
         
-        */
+        
 //5. boolean, operadores logicos y de comparacion
-       System.out.println(10>9);//true
+      /* System.out.println(10>9);//true
        System.out.println(10==9);//false
        System.out.println(10<9);//false
        System.out.println(10>=9);//true
@@ -97,8 +97,15 @@ public class Sintaxis {
        System.out.println(10!=9);//true
        
        int x=3;
-       System.out.println(x<5&&x>10);
+       System.out.println(x<5&&x>10);//false
+       System.out.println(x<5||x>10);//true
+       System.out.println(!(x<5&&x>10));//true
+/*
 
+*/
+       
+      
+      
     }
     
 }
