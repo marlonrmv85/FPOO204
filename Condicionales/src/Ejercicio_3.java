@@ -23,6 +23,6 @@ public class Ejercicio_3 {
         } else {
             System.out.println("el costo de su entrada es: $190.");
         }
-
+//d
         }
     }
