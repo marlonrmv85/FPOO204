@@ -15,8 +15,19 @@ public class Main {
         System.out.println("ingresa un numero entero positivo");
         int num = sc.nextInt();
 
-        if(num%2==0);
-        System.out.println(num);
+        if (num > 0) {
+            System.out.print("Números impares desde 1 hasta " + num + ": ");
 
+            for (int i = 1; i <= num; i += 2) {
+                System.out.print(i);
+                if (i + 2 <= num) {
+                    System.out.print(", ");
+                }
+            }
+
+            System.out.println();
+        } else {
+            System.out.println("El número debe ser un entero positivo.");
+        }
         }
     }
