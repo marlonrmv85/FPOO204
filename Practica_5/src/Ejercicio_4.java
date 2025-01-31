@@ -8,9 +8,20 @@ public class Ejercicio_4 {
 //        introducido. (img 1)
 
 
-        System.out.println("introduce la altura del triangulo");
-        int a = sc.nextInt();
+        System.out.println("Introduce la altura del triángulo (entero positivo):");
+        int altura = sc.nextInt();
+
+        if (altura > 0) {
+            for (int i = 1; i <= altura; i++) {
+                for (int j = i; j >= 1; j--) {
+                    System.out.print(j + " ");
+                }
+                System.out.println();
+            }
+        } else {
+            System.out.println("La altura debe ser un número entero positivo.");
 
 
+        }
     }
 }
