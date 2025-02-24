@@ -1,9 +1,51 @@
 public class Spartan {
 
-    public String name;
-    int health;
-    int shield;
-    String maingun;
+    public int getShield() {
+        return shield;
+    }
+
+    public void setShield(int shield) {
+        this.shield = shield;
+    }
+
+    private String name;
+
+    public int getHealth() {
+        return health;
+    }
+
+    public Spartan(String name, int health, int shield, String maingun) {
+        this.name = name;
+        this.health = health;
+        this.shield = shield;
+        this.maingun = maingun;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
+    public String getMaingun() {
+        return maingun;
+    }
+
+    public void setMaingun(String maingun) {
+        this.maingun = maingun;
+    }
+
+    private int health;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private int shield;
+    private String maingun;
+
 
     //metodos del spartan
     public void showInfo(){
