@@ -72,5 +72,11 @@ public void run(boolean status){
         }else{
             System.out.println( " The spartan " + name + " stopped ");
         }
+    private void consultaCortana  {
+        System.out.println("conversacion privada............");
+
+    }
+
+    }
 }
-}
+

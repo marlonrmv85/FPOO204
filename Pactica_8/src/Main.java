@@ -18,9 +18,9 @@ masterboss.run(true);
 
 
 
-masterboss.setName("Ivan Isay");
+masterboss.setName("Marlon");
 masterboss.showInfo();
-//System.out.println(masterboss.getName());
+System.out.println(masterboss.getName());
 
         }
     }
