@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Contrase_a">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Contraseña/dist/Contrase_a.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
