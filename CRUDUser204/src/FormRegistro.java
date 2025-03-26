@@ -50,9 +50,9 @@ public class FormRegistro extends javax.swing.JFrame {
         Guardar = new javax.swing.JButton();
         Limpiar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 3, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel1.setText("Registro de Usuarios");
 
         jLabel2.setText("Nombre:");
@@ -61,16 +61,11 @@ public class FormRegistro extends javax.swing.JFrame {
 
         jLabel4.setText("Contrasenia");
 
-        txtNombre.setBackground(new java.awt.Color(0, 255, 153));
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
-
-        txtCorreo.setBackground(new java.awt.Color(0, 255, 153));
-
-        txtContrasena.setBackground(new java.awt.Color(0, 255, 153));
 
         Guardar.setText("Guardar");
         Guardar.addActionListener(new java.awt.event.ActionListener() {
