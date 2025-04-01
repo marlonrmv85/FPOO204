@@ -10,14 +10,14 @@ import javax.swing.JOptionPane;
  *
  * @author stuar
  */
-public class FormConsulta extends javax.swing.JFrame {
+public class FormActualizar extends javax.swing.JFrame {
 
+    
     private UserCRUD crud;
- 
     /**
-     * Creates new form FormConsulta
+     * Creates new form FormActualizar
      */
-    public FormConsulta() {
+    public FormActualizar() {
         initComponents();
         crud = new UserCRUD();
     }
@@ -31,17 +31,24 @@ public class FormConsulta extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         txtid = new javax.swing.JTextField();
         Buscar = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        Actualizar = new javax.swing.JButton();
         Todos = new javax.swing.JButton();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel1.setText("Consulta de Usuarios");
+        jLabel1.setText("Actualizar usuarios");
 
         txtid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,12 +71,21 @@ public class FormConsulta extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "id", "nombre", "Correo", "Contrasena"
+                "ID", "Nombre", "Correo", "Contrasena"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane2.setViewportView(jTable1);
 
-        Todos.setText("Mostrar Todos");
+        Actualizar.setBackground(new java.awt.Color(204, 255, 204));
+        Actualizar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Actualizar.setText("Actualizar");
+        Actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ActualizarActionPerformed(evt);
+            }
+        });
+
+        Todos.setText("Mostrar todos los registros");
         Todos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TodosActionPerformed(evt);
@@ -81,38 +97,42 @@ public class FormConsulta extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Buscar)
-                .addGap(57, 57, 57))
-            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 401, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(Todos)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addComponent(jScrollPane2)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addGap(147, 147, 147))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                        .addComponent(Buscar)
+                        .addGap(71, 71, 71)
+                        .addComponent(Todos)
+                        .addGap(14, 14, 14))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(224, 224, 224)
+                .addComponent(Actualizar)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(jLabel1)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Buscar))
-                .addGap(34, 34, 34)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(Todos)
-                .addGap(36, 36, 36))
+                    .addComponent(Buscar)
+                    .addComponent(Todos))
+                .addGap(32, 32, 32)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(Actualizar)
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         pack();
@@ -122,8 +142,27 @@ public class FormConsulta extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtidActionPerformed
 
+    private void ActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActualizarActionPerformed
+            int fila = jTable1.getSelectedRow();
+        if (fila >= 0) {
+            int id = Integer.parseInt(jTable1.getValueAt(fila, 0).toString());
+            String nombre = jTable1.getValueAt(fila, 1).toString();
+            String correo = jTable1.getValueAt(fila, 2).toString();
+            String contrasena = jTable1.getValueAt(fila, 3).toString();
+
+            boolean actualizado = crud.actualizarUsuario(id, nombre, correo, contrasena);
+
+            if (actualizado) {
+                JOptionPane.showMessageDialog(this, "Usuario actualizado correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al actualizar usuario");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Selecciona un usuario para actualizar");
+        }
+    }//GEN-LAST:event_ActualizarActionPerformed
+
     private void BuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarActionPerformed
-        
         //1. Obtener el valor del txt
         String idtext = txtid.getText();
         
@@ -149,6 +188,7 @@ public class FormConsulta extends javax.swing.JFrame {
     }//GEN-LAST:event_BuscarActionPerformed
 
     private void TodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TodosActionPerformed
+        
         ResultSet todos = crud.obtenerTodos();
         DefaultTableModel modeloT = (DefaultTableModel) jTable1.getModel();
         modeloT.setRowCount (0);
@@ -161,6 +201,7 @@ public class FormConsulta extends javax.swing.JFrame {
     catch(SQLException x){
 	System.out.print("Error al llenar la tabla"+ x.getMessage());
         }
+    
     }//GEN-LAST:event_TodosActionPerformed
 
     /**
@@ -180,34 +221,33 @@ public class FormConsulta extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FormConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormActualizar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FormConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormActualizar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FormConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormActualizar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FormConsulta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FormActualizar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FormConsulta().setVisible(true);
+                new FormActualizar().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Actualizar;
     private javax.swing.JButton Buscar;
     private javax.swing.JButton Todos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField txtid;
     // End of variables declaration//GEN-END:variables
-
 }
-
-
-
